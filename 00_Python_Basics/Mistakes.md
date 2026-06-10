@@ -10,6 +10,7 @@
 
 ```python
 n = int(input("Enter anything: "))
+
 ```
 
 ### Input Given
