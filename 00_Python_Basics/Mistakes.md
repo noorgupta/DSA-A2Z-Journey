@@ -82,3 +82,51 @@ python
 `input()` returns a string.
 
 Before converting to an integer, ensure the input contains a valid numeric value.
+
+# Common Mistakes
+
+## Mistake 1
+
+```python
+int("hello")
+```
+
+Error:
+
+```text
+ValueError
+```
+
+Reason:
+
+Python cannot convert alphabetic text into an integer.
+
+---
+
+## Mistake 2
+
+```python
+n = input()
+```
+
+Input:
+
+```text
+100
+```
+
+Many beginners think:
+
+```python
+n = 100
+```
+
+Reality:
+
+```python
+n = "100"
+```
+
+because `input()` always returns a string.
+
+---
