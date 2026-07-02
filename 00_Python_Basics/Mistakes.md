@@ -130,3 +130,124 @@ n = "100"
 because `input()` always returns a string.
 
 ---
+
+# Conditional Statements
+
+## Mistake 3: Using Assignment Instead of Comparison
+
+### Wrong
+
+```python
+if age = 18:
+```
+
+### Error
+
+```text
+SyntaxError
+```
+
+### Why It Happened
+
+`=` assigns a value.
+
+Conditions require comparison using `==`.
+
+### Correct
+
+```python
+if age == 18:
+```
+
+---
+
+## Mistake 4: Wrong Order of Conditions
+
+### Wrong
+
+```python
+if marks >= 50:
+    print("C")
+elif marks >= 75:
+    print("B")
+```
+
+### Why It Happened
+
+Python executes the first `True` condition and skips the rest.
+
+A student scoring 82 will incorrectly receive grade `C`.
+
+### Learning
+
+Always write more specific conditions before broader ones.
+
+---
+
+## Mistake 5: Forgetting the Colon
+
+### Wrong
+
+```python
+if age >= 18
+    print("Eligible")
+```
+
+### Error
+
+```text
+SyntaxError
+```
+
+### Learning
+
+Every `if`, `elif`, and `else` statement must end with a colon (`:`).
+
+---
+
+## Mistake 6: Incorrect Indentation
+
+### Wrong
+
+```python
+if age >= 18:
+print("Eligible")
+```
+
+### Error
+
+```text
+IndentationError
+```
+
+### Learning
+
+Python uses indentation to define blocks of code.
+
+Always indent the statements inside `if`, `elif`, and `else`.
+
+---
+
+## Mistake 7: Assuming All Conditions Execute
+
+Some beginners think Python checks every condition.
+
+Reality:
+
+Python stops after the **first `True` condition** in an `if-elif-else` chain.
+
+### Learning
+
+Remember the execution flow:
+
+```text
+Top
+ ↓
+Check condition
+ ↓
+True?
+ ↓
+Execute
+ ↓
+Stop checking remaining conditions
+```
