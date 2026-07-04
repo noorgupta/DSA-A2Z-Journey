@@ -12,9 +12,9 @@ print("-" * 40)
 marks = int(input("Enter your marks: "))
 
 if marks >= 90:
-    print("Grade A")
+    print("Grade A,excellent")
 elif marks >= 75:
-    print("Grade B")
+    print("Grade B,good")
 elif marks >= 50:
     print("Grade C,Improve")
 else:
