@@ -16,6 +16,6 @@ if marks >= 90:
 elif marks >= 75:
     print("Grade B,good")
 elif marks >= 50:
-    print("Grade C,Improve")
+    print("Grade C,Do better next time")
 else:
-    print("Fail")
+    print("Fail,Improve better ")
