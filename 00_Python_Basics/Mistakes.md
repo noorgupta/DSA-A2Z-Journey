@@ -251,3 +251,133 @@ Execute
  ↓
 Stop checking remaining conditions
 ```
+# Switch Case
+
+## Mistake 1: Searching for Traditional Switch Case in Python
+
+### Problem
+
+Trying to write C++ or Java style `switch-case` syntax in Python.
+
+### Learning
+
+Python does not support the traditional switch-case statement.
+
+Use:
+
+* `if-elif-else`
+* Dictionary mapping
+* `match-case` (Python 3.10+)
+
+---
+
+## Mistake 2: Forgetting the Default Case
+
+When using dictionaries:
+
+```python
+days.get(day)
+```
+
+If the key does not exist, the result will be `None`.
+
+### Better
+
+```python
+days.get(day, "Invalid Day")
+```
+
+Always provide a default value when appropriate.
+
+# For Loops
+
+## Mistake 1: Assuming range(5) Includes 5
+
+### Wrong Assumption
+
+```python
+range(5)
+```
+
+Expected:
+
+```
+1 2 3 4 5
+```
+
+### Reality
+
+```
+0 1 2 3 4
+```
+
+### Learning
+
+`range(stop)` always starts from **0** and stops **before** the stop value.
+
+---
+
+## Mistake 2: Forgetting Indentation
+
+### Wrong
+
+```python
+for i in range(5):
+print(i)
+```
+
+### Error
+
+```
+IndentationError
+```
+
+### Learning
+
+Always indent the code inside a loop.
+
+---
+
+## Mistake 3: Using Step = 0
+
+### Wrong
+
+```python
+range(1, 10, 0)
+```
+
+### Error
+
+```
+ValueError: range() arg 3 must not be zero
+```
+
+### Learning
+
+The step value must never be zero.
+
+---
+
+## Mistake 4: Using the Wrong Loop Boundary
+
+### Example
+
+```python
+for i in range(1, 5):
+```
+
+Some beginners expect:
+
+```
+1 2 3 4 5
+```
+
+Actual output:
+
+```
+1 2 3 4
+```
+
+### Learning
+
+The stop value is always excluded.
