@@ -381,3 +381,88 @@ Actual output:
 ### Learning
 
 The stop value is always excluded.
+
+# While Loops
+
+## Mistake 1: Forgetting to Update the Variable
+
+### Wrong
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+```
+
+### Problem
+
+The condition always remains `True`.
+
+The loop never ends.
+
+### Learning
+
+Always update the loop variable.
+
+Example:
+
+```python
+count += 1
+```
+
+---
+
+## Mistake 2: Wrong Condition
+
+### Wrong
+
+```python
+count = 5
+
+while count <= 1:
+    print(count)
+```
+
+### Problem
+
+The condition is already `False`.
+
+The loop never executes.
+
+### Learning
+
+Check the initial value and the loop condition carefully.
+
+---
+
+## Mistake 3: Infinite Loop
+
+### Wrong
+
+```python
+while True:
+    print("Hello")
+```
+
+### Problem
+
+The loop runs forever unless manually stopped.
+
+### Learning
+
+Use `break` or change the condition when an infinite loop is not intended.
+
+---
+
+## Mistake 4: Using a for Loop When a while Loop is More Suitable
+
+Example:
+
+Reading user input until the user enters `"exit"`.
+
+Using a `while` loop is simpler because the number of inputs is unknown.
+
+### Learning
+
+Choose the loop based on the problem, not personal preference.
