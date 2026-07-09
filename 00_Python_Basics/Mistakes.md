@@ -636,3 +636,71 @@ O(n)
 ```
 
 Always ignore constants in Big O notation.
+
+# Space Complexity
+
+## Mistake 1: Counting the Input Array
+
+### Wrong Thinking
+
+```
+arr = [1,2,3]
+
+Space = O(n)
+```
+
+### Learning
+
+The input array is **not counted**.
+
+Only extra memory created by the algorithm is counted.
+
+---
+
+## Mistake 2: Confusing Time with Space
+
+A single loop:
+
+```python
+for i in arr:
+```
+
+means
+
+Time:
+
+```
+O(n)
+```
+
+It does **not** mean
+
+Space:
+
+```
+O(n)
+```
+
+If no additional data structure is created, the space complexity remains:
+
+```
+O(1)
+```
+
+---
+
+## Mistake 3: Forgetting Extra Arrays
+
+Creating another list:
+
+```python
+copy = arr.copy()
+```
+
+requires additional memory.
+
+Space Complexity:
+
+```
+O(n)
+```
