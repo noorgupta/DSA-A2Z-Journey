@@ -553,3 +553,86 @@ Changes made inside a function affect the original list.
 Integers are immutable.
 
 Changing them inside a function does not affect the original variable.
+
+# Time Complexity
+
+## Mistake 1: Measuring Time in Seconds
+
+### Wrong Thinking
+
+"This code runs in 2 seconds, so its complexity is O(2)."
+
+### Learning
+
+Time Complexity does not measure seconds.
+
+It measures how the number of operations grows with the input size.
+
+---
+
+## Mistake 2: Thinking Two Separate Loops Mean O(n²)
+
+### Wrong
+
+```python
+for i in range(n):
+    ...
+
+for j in range(n):
+    ...
+```
+
+Complexity:
+
+```
+O(n²)
+```
+
+### Correct
+
+```
+O(n + n)
+
+↓
+
+O(2n)
+
+↓
+
+O(n)
+```
+
+---
+
+## Mistake 3: Forgetting That Nested Loops Multiply
+
+```python
+for i in range(n):
+    for j in range(n):
+```
+
+Complexity:
+
+```
+O(n²)
+```
+
+Not:
+
+```
+O(2n)
+```
+
+---
+
+## Mistake 4: Keeping Constants
+
+```
+O(5n)
+
+↓
+
+O(n)
+```
+
+Always ignore constants in Big O notation.
