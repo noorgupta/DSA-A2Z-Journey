@@ -466,3 +466,90 @@ Using a `while` loop is simpler because the number of inputs is unknown.
 ### Learning
 
 Choose the loop based on the problem, not personal preference.
+
+# Functions
+
+## Mistake 1: Defining a Function but Never Calling It
+
+### Wrong
+
+```python
+def greet():
+    print("Hello")
+```
+
+### Problem
+
+Nothing happens.
+
+### Learning
+
+A function executes only when it is called.
+
+```python
+greet()
+```
+
+---
+
+## Mistake 2: Forgetting return
+
+### Wrong
+
+```python
+def add(a, b):
+    a + b
+```
+
+### Problem
+
+The function returns `None`.
+
+### Learning
+
+Use `return` when the result needs to be sent back.
+
+---
+
+## Mistake 3: Confusing print() with return
+
+`print()` displays a value.
+
+`return` sends a value back to the caller.
+
+They are not the same.
+
+---
+
+## Mistake 4: Accessing Local Variables Outside the Function
+
+### Wrong
+
+```python
+def demo():
+    x = 10
+
+print(x)
+```
+
+### Error
+
+```
+NameError
+```
+
+### Learning
+
+Local variables exist only inside the function.
+
+---
+
+## Mistake 5: Assuming Lists Behave Like Integers
+
+Lists are mutable.
+
+Changes made inside a function affect the original list.
+
+Integers are immutable.
+
+Changing them inside a function does not affect the original variable.
