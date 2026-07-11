@@ -78,3 +78,198 @@ For DSA in Python:
 
 - We use **lists** to implement array concepts.
 - Think in terms of arrays while writing code using lists.
+
+# Array Traversal
+
+## Mistake 1: Using len(arr) as the Last Index
+
+### Wrong
+
+```python
+print(arr[len(arr)])
+```
+
+### Error
+
+```
+IndexError: list index out of range
+```
+
+### Learning
+
+The last valid index is:
+
+```python
+len(arr) - 1
+```
+
+---
+
+## Mistake 2: Forgetting to Increment the Index in a While Loop
+
+### Wrong
+
+```python
+i = 0
+
+while i < len(arr):
+    print(arr[i])
+```
+
+### Problem
+
+Infinite loop.
+
+### Learning
+
+Always update the loop variable.
+
+```python
+i += 1
+```
+
+---
+
+## Mistake 3: Confusing Index with Element
+
+### Wrong
+
+```python
+for i in arr:
+    print(arr[i])
+```
+
+### Why?
+
+Here, `i` is already the element, not the index.
+
+If `arr = [10, 20, 30]`, Python tries to access:
+
+```python
+arr[10]
+```
+
+which causes an error.
+
+### Correct
+
+```python
+for num in arr:
+    print(num)
+```
+
+or
+
+```python
+for i in range(len(arr)):
+    print(arr[i])
+```
+
+---
+
+## Mistake 4: Using enumerate() Incorrectly
+
+### Wrong
+
+```python
+for item in enumerate(arr):
+    print(item)
+```
+
+Output:
+
+```
+(0, 10)
+(1, 20)
+(2, 30)
+```
+
+This is not wrong syntactically, but if you want separate values, unpack them.
+
+### Better
+
+```python
+for index, value in enumerate(arr):
+    print(index, value)
+```
+# Array Operations
+
+## Mistake 1: Accessing an Invalid Index
+
+### Wrong
+
+```python
+arr = [10, 20, 30]
+
+print(arr[5])
+```
+
+### Error
+
+```
+IndexError: list index out of range
+```
+
+### Learning
+
+Always access indices between:
+
+```
+0
+
+and
+
+len(arr) - 1
+```
+
+---
+
+## Mistake 2: Thinking Insert is O(1)
+
+Many beginners think inserting is always fast.
+
+Reality:
+
+When inserting in the middle, every element after that position shifts.
+
+Complexity:
+
+```
+O(n)
+```
+
+---
+
+## Mistake 3: Thinking Delete Removes Only the Value
+
+Deleting an element also shifts remaining elements.
+
+Example:
+
+```
+10 20 30 40
+
+Delete 20
+
+↓
+
+10 30 40
+```
+
+---
+
+## Mistake 4: Confusing pop() and remove()
+
+```python
+pop(index)
+```
+
+removes using the **index**.
+
+```python
+remove(value)
+```
+
+removes using the **value**.
+
+These are different operations.
