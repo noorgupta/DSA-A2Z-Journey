@@ -27,3 +27,23 @@ arr = [10, 20, 30]
 arr.insert(1, 15)
 
 print(arr)
+
+#pop()
+
+arr = [10, 20, 30, 40]
+
+print(arr.pop())
+
+print(arr)
+
+print(arr.pop(1))
+
+print(arr)
+
+#remove()
+
+arr = [10, 20, 30, 20]
+
+arr.remove(20)
+
+print(arr)

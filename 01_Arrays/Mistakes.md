@@ -405,3 +405,65 @@ To replace:
 ```python
 arr[1] = 15
 ```
+
+# pop()
+
+## Mistake 1
+
+```python
+arr.pop(10)
+```
+
+Error
+
+```
+IndexError
+```
+
+Learning
+
+Index must exist.
+
+---
+
+## Mistake 2
+
+Thinking pop() removes by value.
+
+Wrong
+
+```python
+arr.pop(20)
+```
+
+`20` is treated as an index, **not** a value.
+
+# remove()
+
+## Mistake 1
+
+```python
+arr.remove(100)
+```
+
+Error
+
+```
+ValueError
+```
+
+Learning
+
+The value must exist.
+
+---
+
+## Mistake 2
+
+Confusing remove() with pop().
+
+```python
+pop(index)
+
+remove(value)
+```

@@ -299,3 +299,159 @@ O(n)
 - Existing elements shift right.
 - Modifies the original list.
 - Returns `None`.
+
+# pop()
+
+## What is pop()?
+
+`pop()` removes and returns an element from the list.
+
+---
+
+## Syntax
+
+```python
+list.pop(index)
+```
+
+If no index is given, it removes the **last element**.
+
+---
+
+## Example 1
+
+```python
+arr = [10, 20, 30]
+
+arr.pop()
+
+print(arr)
+```
+
+Output
+
+```
+[10, 20]
+```
+
+---
+
+## Example 2
+
+```python
+arr = [10, 20, 30]
+
+arr.pop(1)
+
+print(arr)
+```
+
+Output
+
+```
+[10, 30]
+```
+
+---
+
+## Return Value
+
+Unlike `append()` and `insert()`, `pop()` returns the removed element.
+
+```python
+x = arr.pop()
+
+print(x)
+```
+
+Output
+
+```
+30
+```
+
+---
+
+## Time Complexity
+
+Removing last element
+
+```
+O(1)
+```
+
+Removing from middle/front
+
+```
+O(n)
+```
+
+because elements shift left.
+
+---
+
+## Key Takeaways
+
+- Removes by **index**.
+- Returns the removed element.
+- Default removes the last element.
+
+# remove()
+
+## What is remove()?
+
+`remove()` removes the **first occurrence of a value**.
+
+---
+
+## Syntax
+
+```python
+list.remove(value)
+```
+
+---
+
+## Example
+
+```python
+arr = [10, 20, 30]
+
+arr.remove(20)
+
+print(arr)
+```
+
+Output
+
+```
+[10, 30]
+```
+
+---
+
+## Return Value
+
+Returns
+
+```
+None
+```
+
+---
+
+## Time Complexity
+
+```
+O(n)
+```
+
+Python first searches for the value, then shifts remaining elements.
+
+---
+
+## Key Takeaways
+
+- Removes by **value**.
+- Removes only the first occurrence.
+- Returns `None`.
