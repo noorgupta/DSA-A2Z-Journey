@@ -61,3 +61,35 @@ print(arr)
 arr = [10, 20, 30, 20]
 
 print(arr.index(20))
+
+#count()
+
+arr = [1, 2, 2, 3]
+
+print(arr.count(2))
+
+#sort()
+
+arr = [5, 2, 8, 1]
+
+arr.sort()
+
+print(arr)
+
+#reverse()
+
+arr = [1, 2, 3]
+
+arr.reverse()
+
+print(arr)
+
+#copy()
+
+arr = [10, 20, 30]
+
+new_arr = arr.copy()
+
+print(new_arr)
+
+

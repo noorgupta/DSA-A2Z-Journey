@@ -513,3 +513,42 @@ Error
 ```
 ValueError
 ```
+
+## Mistake
+
+```python
+x = arr.sort()
+```
+
+`x` becomes
+
+```
+None
+```
+
+## Mistake
+
+```python
+a = [1, 2]
+b = a
+
+b.append(3)
+
+print(a)
+```
+
+Output
+
+```
+[1, 2, 3]
+```
+
+### Learning
+
+`b = a` does **not** create a copy.
+
+Use:
+
+```python
+b = a.copy()
+```

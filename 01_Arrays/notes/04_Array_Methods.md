@@ -565,3 +565,167 @@ O(n)
 - Searches by value.
 - Returns the first matching index.
 - Raises `ValueError` if the value is not found.
+
+# count()
+
+## What is count()?
+
+Returns how many times a value appears in the list.
+
+---
+
+## Syntax
+
+```python
+list.count(value)
+```
+
+---
+
+## Example
+
+```python
+arr = [1, 2, 2, 3]
+
+print(arr.count(2))
+```
+
+Output
+
+```
+2
+```
+
+---
+
+## Time Complexity
+
+```
+O(n)
+```
+# sort()
+
+## What is sort()?
+
+Sorts the original list in ascending order.
+
+---
+
+## Syntax
+
+```python
+list.sort()
+```
+
+Descending order:
+
+```python
+list.sort(reverse=True)
+```
+
+---
+## Return Value
+
+```
+None
+```
+
+---
+
+## Time Complexity
+
+```
+O(n log n)
+```
+
+# reverse()
+
+## What is reverse()?
+
+Reverses the order of elements in the original list.
+
+---
+
+## Example
+
+```python
+arr = [1, 2, 3]
+
+arr.reverse()
+
+print(arr)
+```
+
+Output
+
+```
+[3, 2, 1]
+```
+
+---
+
+## Return Value
+
+```
+None
+```
+
+---
+
+## Time Complexity
+
+```
+O(n)
+```
+# copy()
+
+## What is copy()?
+
+Creates a shallow copy of a list.
+
+---
+
+## Example
+
+```python
+arr = [10, 20, 30]
+
+new_arr = arr.copy()
+
+print(new_arr)
+```
+
+Output
+
+```
+[10, 20, 30]
+```
+
+---
+
+## Time Complexity
+
+```
+O(n)
+```
+
+---
+
+## Why use copy()?
+
+Without `copy()`:
+
+```python
+a = [1, 2, 3]
+b = a
+```
+
+Both variables point to the **same list**.
+
+With `copy()`:
+
+```python
+b = a.copy()
+```
+
+Now they are **different lists**.
