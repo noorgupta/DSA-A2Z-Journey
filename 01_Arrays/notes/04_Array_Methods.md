@@ -455,3 +455,61 @@ Python first searches for the value, then shifts remaining elements.
 - Removes by **value**.
 - Removes only the first occurrence.
 - Returns `None`.
+
+# clear()
+
+## What is clear()?
+
+`clear()` removes all elements from a list.
+
+---
+
+## Syntax
+
+```python
+list.clear()
+```
+
+---
+
+## Example
+
+```python
+arr = [10, 20, 30]
+
+arr.clear()
+
+print(arr)
+```
+
+Output
+
+```
+[]
+```
+
+---
+
+## Return Value
+
+Returns
+
+```
+None
+```
+
+---
+
+## Time Complexity
+
+```
+O(n)
+```
+
+---
+
+## Key Takeaways
+
+- Removes every element.
+- The list still exists.
+- Only its contents are removed.

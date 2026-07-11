@@ -47,3 +47,11 @@ arr = [10, 20, 30, 20]
 arr.remove(20)
 
 print(arr)
+
+#clear()
+
+arr = [10, 20, 30]
+
+arr.clear()
+
+print(arr)

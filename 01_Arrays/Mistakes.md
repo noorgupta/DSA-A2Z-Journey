@@ -467,3 +467,37 @@ pop(index)
 
 remove(value)
 ```
+
+# clear()
+
+## Mistake 1
+
+Thinking clear() deletes the variable.
+
+```python
+arr.clear()
+
+print(arr)
+```
+
+Output
+
+```
+[]
+```
+
+The variable still exists.
+
+---
+
+## Mistake 2
+
+```python
+x = arr.clear()
+```
+
+`x` becomes
+
+```
+None
+```
