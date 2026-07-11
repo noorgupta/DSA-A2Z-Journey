@@ -273,3 +273,63 @@ remove(value)
 removes using the **value**.
 
 These are different operations.
+
+# Array Methods
+
+## append()
+
+### Mistake 1
+
+Wrong
+
+```python
+numbers = [1,2,3]
+
+numbers = numbers.append(4)
+```
+
+Problem
+
+```
+numbers
+
+↓
+
+None
+```
+
+### Why?
+
+`append()` modifies the original list and returns `None`.
+
+Correct
+
+```python
+numbers.append(4)
+```
+
+---
+
+## Mistake 2
+
+Wrong
+
+```python
+numbers.append(4,5)
+```
+
+Problem
+
+```
+TypeError
+```
+
+### Learning
+
+`append()` accepts only **one element**.
+
+To add multiple elements use:
+
+```python
+extend()
+```
