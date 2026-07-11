@@ -146,3 +146,87 @@ Commonly used when:
 - Modifies the original list.
 - Returns `None`.
 - Average time complexity is O(1).
+
+# extend()
+
+## What is extend()?
+
+`extend()` adds **multiple elements** from another iterable (list, tuple, etc.) to the **end** of the list.
+
+---
+
+## Syntax
+
+```python
+list.extend(iterable)
+```
+
+---
+
+## Example
+
+```python
+numbers = [10, 20]
+
+numbers.extend([30, 40])
+
+print(numbers)
+```
+
+Output:
+
+```
+[10, 20, 30, 40]
+```
+
+---
+
+## append() vs extend()
+
+```python
+arr = [1, 2]
+
+arr.append([3, 4])
+
+print(arr)
+```
+
+Output:
+
+```
+[1, 2, [3, 4]]
+```
+
+---
+
+```python
+arr = [1, 2]
+
+arr.extend([3, 4])
+
+print(arr)
+```
+
+Output:
+
+```
+[1, 2, 3, 4]
+```
+
+---
+
+## Time Complexity
+
+```
+O(k)
+```
+
+where `k` is the number of elements being added.
+
+---
+
+## Key Takeaways
+
+- Adds multiple elements.
+- Modifies the original list.
+- Returns `None`.
