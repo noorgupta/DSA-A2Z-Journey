@@ -729,3 +729,21 @@ b = a.copy()
 ```
 
 Now they are **different lists**.
+
+### Why is sort() O(n log n)?
+
+Python's `sort()` uses Timsort.
+
+It repeatedly divides the data into smaller parts and merges them efficiently.
+
+- Splitting happens in `log n` levels.
+- At each level, all `n` elements are processed.
+
+Therefore,
+
+Time Complexity:
+
+O(n × log n) = O(n log n)
+
+This is much faster than simple sorting algorithms like Bubble Sort, which take O(n²).
+
