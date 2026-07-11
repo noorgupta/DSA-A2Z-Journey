@@ -230,3 +230,72 @@ where `k` is the number of elements being added.
 - Adds multiple elements.
 - Modifies the original list.
 - Returns `None`.
+
+# insert()
+
+## What is insert()?
+
+`insert()` adds an element at a specific index.
+
+Unlike `append()`, the element is **not always added at the end**.
+
+---
+
+## Syntax
+
+```python
+list.insert(index, element)
+```
+
+---
+
+## Example
+
+```python
+arr = [10, 20, 30]
+
+arr.insert(1, 15)
+
+print(arr)
+```
+
+Output:
+
+```
+[10, 15, 20, 30]
+```
+
+---
+
+## Visual
+
+Before
+
+```
+10 20 30
+```
+
+Insert 15 at index 1
+
+```
+10 15 20 30
+```
+
+Elements after index 1 shift one position to the right.
+
+---
+
+## Time Complexity
+
+```
+O(n)
+```
+
+---
+
+## Key Takeaways
+
+- Inserts at any index.
+- Existing elements shift right.
+- Modifies the original list.
+- Returns `None`.

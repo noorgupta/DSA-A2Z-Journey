@@ -333,3 +333,75 @@ To add multiple elements use:
 ```python
 extend()
 ```
+
+# extend()
+
+## Mistake 1
+
+```python
+arr.extend(10)
+```
+
+Error:
+
+```
+TypeError
+```
+
+Learning:
+
+`extend()` expects an iterable.
+
+Correct:
+
+```python
+arr.extend([10])
+```
+
+---
+
+## Mistake 2
+
+```python
+x = arr.extend([3,4])
+```
+
+`x` becomes `None`.
+
+Like `append()`, `extend()` modifies the original list.
+
+# insert()
+
+## Mistake 1
+
+```python
+x = arr.insert(1, 10)
+```
+
+`x` becomes `None`.
+
+---
+
+## Mistake 2
+
+Thinking `insert()` replaces a value.
+
+```python
+arr = [10, 20, 30]
+
+arr.insert(1, 15)
+```
+
+Result:
+
+```
+[10, 15, 20, 30]
+```
+
+It **adds**, not **replaces**.
+
+To replace:
+
+```python
+arr[1] = 15
+```
