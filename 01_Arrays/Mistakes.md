@@ -501,3 +501,15 @@ x = arr.clear()
 ```
 None
 ```
+
+## Mistake
+
+```python
+arr.index(100)
+```
+
+Error
+
+```
+ValueError
+```

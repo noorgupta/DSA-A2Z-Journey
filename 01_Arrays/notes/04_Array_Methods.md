@@ -513,3 +513,55 @@ O(n)
 - Removes every element.
 - The list still exists.
 - Only its contents are removed.
+
+# index()
+
+## What is index()?
+
+Returns the index of the **first occurrence** of a value.
+
+---
+
+## Syntax
+
+```python
+list.index(value)
+```
+
+---
+
+## Example
+
+```python
+arr = [10, 20, 30, 20]
+
+print(arr.index(20))
+```
+
+Output
+
+```
+1
+```
+
+---
+
+## Return Value
+
+Returns the index.
+
+---
+
+## Time Complexity
+
+```
+O(n)
+```
+
+---
+
+## Key Takeaways
+
+- Searches by value.
+- Returns the first matching index.
+- Raises `ValueError` if the value is not found.

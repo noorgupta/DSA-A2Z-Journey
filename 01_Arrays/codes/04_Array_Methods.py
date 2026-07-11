@@ -55,3 +55,9 @@ arr = [10, 20, 30]
 arr.clear()
 
 print(arr)
+
+#index()
+
+arr = [10, 20, 30, 20]
+
+print(arr.index(20))
