@@ -552,3 +552,45 @@ Use:
 ```python
 b = a.copy()
 ```
+
+# Linear Search
+
+## Mistake 1
+
+Forgetting `break`.
+
+Without `break`, the loop continues even after finding the element.
+
+---
+
+## Mistake 2
+
+Returning the element instead of its index.
+
+Question carefully.
+
+Some problems ask for:
+
+- Index
+- Value
+- True / False
+
+---
+
+## Mistake 3
+
+Not handling "not found".
+
+Always return:
+
+```python
+-1
+```
+
+or
+
+```python
+False
+```
+
+depending on the problem statement.
